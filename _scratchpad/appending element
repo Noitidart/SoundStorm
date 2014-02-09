@@ -1,0 +1,15 @@
+var btn = gBrowser.contentDocument.querySelector('.sc-button-play');
+//btn.style.outline = '1px solid red';
+Services.wm.getMostRecentWindow(null).alert(btn.offsetTop);
+
+var mydiv = document.createElementNS('http://www.w3.org/1999/xhtml', 'div');
+mydiv.style.width = btn.offsetWidth + 'px';
+mydiv.style.height = btn.offsetHeight + 'px';
+mydiv.style.position = 'absolute';
+mydiv.style.top = btn.offsetTop + 'px';
+mydiv.style.left = btn.offsetLeft + 'px';
+
+mydiv.innerHTML = '<div class="dialog sc-border-box g-z-index-overlay dialog__leftcenter" id="soundStromRepeat" tabindex="-1" style="outline: medium none; position: absolute; border-radius: 3px; padding: 3px; text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.05); font-size:14px; white-space:nowrap; left:-55%; top:110%;">Repeat<div style="transform:rotate(45deg);top:-5px;left:45%;" class="dialog__arrow"></div></div>';
+
+btn.parentNode.insertBefore(mydiv, btn);
+//btn.parentNode.appendChild(mydiv);

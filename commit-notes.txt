@@ -1,0 +1,16 @@
+bootstrap.js
+-on soundcloud website, if play something after it finishes it starts playing something else, so if i click right away on it, it creates some javascript endless loop that needs to be aborted, so put 100ms wait before clicking to play again
+-so the 100ms dealy works but its fighting between playing the next auto play and itself because mut obs attached to all buttons not just clicked on obs, hm maybe i should attach obs to the btn only when click repeat?
+-uncommented the debug test where i had not addDiv on install, i was testing loading attachment
+-also commented out the lines where it was not attaching to frames in the addToFrames func
+
+-idea: no longer observing all onload, observe only if repeated
+-idea: hotkey to jump to tab that has the repeating song, and it should scroll to top and like download style arrow point to it
+-idea: dont remove the added rep label as it can hold play count
+
+-created focus func
+
+-fixed here but need to fix forked gist, i said uncomment if you want to skip frames, but it should be "COMMENT if you want to skip" in in both loadInto and unloadFrom frames
+-the making it observe only one fixed the endless loop thing when mutfunc triggered when on soundcloud site, it was an endless loop in my addon fighting to play each other because i was observing multiple
+-todo: figure out how to allow user to click another song and it will abort this repeat (im thinking watch the second mark counter, but i dont like that idea so much)
+-todo: also cannot even pause itself
