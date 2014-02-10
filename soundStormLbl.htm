@@ -43,8 +43,8 @@
 		z-index: 899;
 		
 		transform: rotate(45deg);
-		margin: auto 50%;
-		left: -5px; /*cuz width is 8px so 4px but 1plus because of border width 1*/
+		margin-left: -4px; /*half of the height*/
+		left: 50%;
 		top: -5px;  /*had to do 1 plus because border width is 1*/
 		
 	}
@@ -66,8 +66,8 @@
 		z-index: 899;
 		
 		transform: rotate(225deg);
-		margin: auto 50%;
-		left: -5px; /*cuz width is 8px so 4px but 1plus because of border width 1*/
+		margin-left: -4px; /*half of the height*/
+		left: 50%;
 		bottom: -5px;  /*had to do 1 plus because border width is 1*/
 		
 	}
@@ -89,8 +89,33 @@
 		z-index: 899;
 		
 		transform: rotate(315deg);
-		margin: 50% auto;
+		top: 50%;
+		margin-top: -4px;
 		left: -5px; /*cuz width is 8px so 4px but 1plus because of border width 1*/
+		
+		
+	}
+
+	.soundStormLblArrowRight {
+		background: none repeat scroll 0% 0% #FFF;
+		border-style: solid;
+		border-color: #CCC;
+		-moz-border-top-colors: none;
+		-moz-border-right-colors: none;
+		-moz-border-bottom-colors: none;
+		-moz-border-left-colors: none;
+		border-image: none;
+		border-width: 1px 0px 0px 1px;
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		box-shadow: -1px -1px 1px -1px rgba(0, 0, 0, 0.5);
+		z-index: 899;
+		
+		transform: rotate(135deg);
+		top: 50%;
+		margin-top: -4px;
+		right: -5px; /*cuz width is 8px so 4px but 1plus because of border width 1*/
 		
 		
 	}
@@ -103,4 +128,6 @@
 </style>
 <div class="soundStormLbl" tabindex="-1">Hold to Repeat<div class="soundStormLblArrowTop" tabindex="-1"></div>
 <div class="soundStormLblArrowBottom" tabindex="-1"></div>
-<div class="soundStormLblArrowLeft" tabindex="-1"></div></div>
+<div class="soundStormLblArrowLeft" tabindex="-1"></div>
+<div class="soundStormLblArrowRight" tabindex="-1"></div>
+</div>
